@@ -50,7 +50,7 @@ val no: Boolean = false
 |Double	|double|
 |Char	|char|
 |Boolean|	boolean|
-> The mapping is quite trivial, but note that this mapping only works because Kotlin’s types cannot be null by default, just like Java’s primitive types cannot hold null. Kotlin’s approach to null safety is explained in detail later in the course.
+> The mapping is quite trivial, but note that this mapping only works because Kotlin’s types cannot be null by default, just like Java’s primitive types cannot hold null. Kotlin’s approach to null safety is explained in detail later in [Nullable Types](https://github.com/hishark/Kotlin-Crash-Course/tree/master/Variables%20and%20Data%20Types#nullable-types).
 
 ## Kotlin's Type inferences
 
