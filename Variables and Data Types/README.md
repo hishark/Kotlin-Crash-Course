@@ -166,6 +166,6 @@ Here are the key takeaways from this lesson:
 - Kotlin’s type system uses explicit nullable types.
     - By default, types are non-nullable (e.g. Person).
     - Each type has a nullable counterpart (e.g. Person?).
-- The safe call operator ? is used to safely access members of nullable types.
-- The Elvis operator ?: is used to handle null values conveniently (e.g. to define useful default values).
-- The unsafe call operator !! acts like a non-null assertion and should be used judiciously.
+- The safe call operator `?` is used to safely access members of nullable types.
+- The Elvis operator `?:` is used to handle null values conveniently (e.g. to define useful default values).
+- The unsafe call operator `!!` acts like a non-null assertion and should be used judiciously.
