@@ -80,4 +80,29 @@ when {
 ```
 
 ## Conditions as Expressions
-Pending
+In Kotlin, both `if` and `when` can be used as expressions instead of statements. An expression is a piece of code that has a value, e.g. `"Kotlin"`, `42 * 17`, or `readInput()`. In contrast, a statement is a piece of code with no value, such as `fun foo() { ... }` or `while (active) { ... }`. In many programming languages, `if` and `when/switch` are statements. But in Kotlin, they are expressions.
+### Expressions with `if`
+Recall this listing from the lesson on if statements:
+```java
+if (planet == "Jupiter") {
+  println("Radius of Jupiter is 69,911km")
+} else if (planet == "Saturn") {
+  println("Radius of Saturn is 58,232km")
+} else {
+  println("No data for planet $planet")
+}
+```
+If you think about it, it seems that the relevant data that changes here based on the condition is the radius. So let’s store that in a variable by using an `if` expression:
+```kotlin
+val radiusInKm = if (planet == "Jupiter") {
+	// Run code here...
+	69911  // Last line defines the return value of this block
+} else if (planet == "Saturn") {
+	// Run code here...
+	58232
+} else {
+	// Run code here...
+	-1
+}
+```
+Here, the entire `if-elseif-else` block has a value. This value for each branch is decided by the **last line in each branch**. You may run arbitrary code in each condition block but ultimately, the last line defines the value.
