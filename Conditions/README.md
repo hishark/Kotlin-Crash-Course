@@ -106,3 +106,23 @@ val radiusInKm = if (planet == "Jupiter") {
 }
 ```
 Here, the entire `if-elseif-else` block has a value. This value for each branch is decided by the **last line in each branch**. You may run arbitrary code in each condition block but ultimately, the last line defines the value.
+### Ternary Conditional Operator in Kotlin
+Kotlin has no separate language construct for a ternary conditional operator of the form `someCondition ? thenThis : elseThat`, which you may know from other languages. Instead, `if` expressions are used:
+```kotlin
+val category1 = if (age >= 18) "adult" else "child"
+```
+> Note that you don’t need curly braces around the condition blocks if they’re a single expression.
+### Expressions with `when`
+Naturally, when can be used as an expression in the same way:
+```kotlin
+val radiusInKm = when (planet) {
+    "Jupiter" -> 69911
+    "Saturn"  -> 58232
+    else      -> -1
+}
+```
+### Summary
+- Expressions have a value. Statements do not.
+- In Kotlin, if and when are expressions.
+  - If you don’t use the value, they work exactly like conditional statements in other languages.
+- Conditional expressions are useful to assign a value directly instead of splitting up declaration and initialization.
